@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Artificial Intelligence</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="Artificial Intelligence" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/img/logo.png" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <!-- Vendor Css files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/slick/slick.css" rel="stylesheet" />
+    <link href="assets/vendor/slick/slick-theme.css" rel="stylesheet" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Template main Css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- ====== Header ====== -->
+    <header id="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div class="row" data-aos="fade-down">
+            <div class="col-sm-6 col-md-7 col-lg-4 col-xl-4 col-xxl-4">
+              <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="57" alt="logo" class="me-3" />
+                Artificial Intelligence
+              </a>
+            </div>
+
+            <div class="col-sm-2 col-md-2 col-lg-6 col-xl-6 col-xxl-6">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav justify-content-center m-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#feature">Service</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#apply-ai">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2">
+              <button class="btn" id="regBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign in</button>
+              <button class="btn d-none" id="logout" type="button">Log out</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ====== Hero ====== -->
+    <main id="hero" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 hero-info">
+            <h5 data-aos="fade-up" data-aos-delay="600">Next generation platform</h5>
+            
+            <h1 class="hero-title">
+                <span data-aos="fade-down" data-aos-delay="200">Artificial </span>
+                <span data-aos="fade-down" data-aos-delay="400">intelligence </span>
+                <span data-aos="fade-down" data-aos-delay="600">& Cyber </span>
+                <span data-aos="fade-down" data-aos-delay="800">security</span>
+            </h1>
+
+            <p class="hero-description" data-aos="fade-down" data-aos-delay="600">
+              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+              previewing layouts and visual mockups.
+            </p>
+
+            <button class="hero-btn btn me-4" data-aos="fade-right" data-aos-delay="700">Get started</button>
+            <button class="hero-btn watch-video btn" data-aos="fade-right" data-aos-delay="600">
+              <i class="bx bx-play"></i>
+              Watch video
+            </button>
+          </div>
+
+          <div class="col-sm-8 col-md-6 col-lg-6" data-aos="fade-left">
+            <img src="assets/img/hero/hero.png" width="632" height="634" alt="hero-img" class="hero-img img-fluid" />
+          </div>
+        </div>
+
+        <div class="row hero-logo"">
+          <div class="col-sm-6 col-md-3 col-lg-3"  data-aos="zoom-in">
+            <img class="img-fluid" src="assets/img/hero/group_1.png" width="218" height="59" alt="logo1" />
+          </div>
+          <div class="col-sm-6 col-md-3 col-lg-3"  data-aos="zoom-in">
+            <img class="img-fluid" src="assets/img/hero/group_2.png" width="213" height="59" alt="logo2" />
+          </div>
+          <div class="col-sm-6 col-md-3 col-lg-3"  data-aos="zoom-in">
+            <img class="img-fluid" src="assets/img/hero/group_3.png" width="207" height="59" alt="logo3" />
+          </div>
+          <div class="col-sm-6 col-md-3 col-lg-3"  data-aos="zoom-in">
+            <img class="img-fluid" src="assets/img/hero/group_4.png" width="295" height="59" alt="logo4" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Apply AI... -->
+    <section id="apply-ai">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-6 col-lg-6" data-aos="fade-right">
+            <img src="assets/img/apply-Ai.png" width="725" height="669" alt="apply-Ai" class="apply-ai-img img-fluid" />
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 apply-ai-info">
+            <h1 class="apply-ai-title">
+              <span data-aos="fade-down" data-aos-delay="200">Apply AI,</span>
+              <span data-aos="fade-down" data-aos-delay="400">Deep Learning</span>
+              <span data-aos="fade-down" data-aos-delay="600">and</span>
+              <span data-aos="fade-down" data-aos-delay="800">Data Sciece</span>
+              <span data-aos="fade-down" data-aos-delay="1000">to solve</span>
+            </h1>
+            <p class="apply-ai-description" data-aos="fade-down" data-aos-duration="1300">
+              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+              previewing layouts and visual mockups.
+            </p>
+            <button class="btn me-4" data-aos="fade-right" data-aos-delay="1300">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature -->
+    <section id="feature">
+      <div class="autoplay">
+        <div class="card" data-aos="flip-left">
+          <img src="assets/img/feature/welcome-3 1.png" alt="feature-logo-1" />
+          <h4 class="card-title">Expert Prespective Agency Awards</h4>
+          <p class="card-description">
+            Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
+        </div>
+        <div class="card" data-aos="flip-left">
+          <img src="assets/img/feature/welcome-3 1-2.png" alt="feature-logo-2" />
+          <h4 class="card-title">Business Prespective Global Agency Awards</h4>
+          <p class="card-description">
+            Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
+        </div>
+        <div class="card" data-aos="flip-left">
+          <img src="assets/img/feature/welcome-3 1-3.png" alt="feature-logo-3" />
+          <h4 class="card-title">Value for Results in Global Agency Awards</h4>
+          <p class="card-description">
+            Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
+        </div>
+        <div class="card" data-aos="flip-left">
+          <img src="assets/img/feature/welcome-3 1-4.png" alt="feature-logo-3" />
+          <h4 class="card-title">Global Experience in Agency Awards</h4>
+          <p class="card-description">
+            Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
+        </div>
+        <div class="card" data-aos="flip-left">
+          <img src="assets/img/feature/welcome-3 1-1.png" alt="feature-logo-3" />
+          <h4 class="card-title">Naxly as the Winners in Global Agency Awards</h4>
+          <p class="card-description">
+            Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xl-6 col-xxl-6">
+            <h1 class="about-title">
+              <span data-aos="fade-down" data-aos-delay="200">What our</span>
+              <span data-aos="fade-down" data-aos-delay="400">clients say</span>
+              <span data-aos="fade-down" data-aos-delay="600">about our</span>
+              <span data-aos="fade-down" data-aos-delay="800">awesome solutions</span>
+            </h1>
+
+            <p data-aos="fade-right" data-aos-delay="700" >
+              To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some
+              advantage from it who do not know.
+            </p>
+            <p data-aos="fade-right" data-aos-delay="800">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing.</p>
+            <p data-aos="fade-right" data-aos-delay="900">Lorem ipsum is placeholder previewing layouts and visual mockups.</p>
+            <p data-aos="fade-right" data-aos-delay="1000">
+              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+              previewing layouts and visual mockups.
+            </p>
+          </div>
+          <div class="col-sm-8 col-md-8 col-lg-6" data-aos="fade-left">
+            <img src="assets/img/about.png" width="642" height="551" alt="about-img" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col col-sm-6 col-md-6 col-lg-3 footer-contact">
+            <img src="assets/img/logo.png" width="45" height="57" alt="footer-logo" />
+            <h6>Artificial Intelligence</h6>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and layouts and visual mockups.</p>
+
+            <div class="footer-contact-info">
+              <div class="d-flex">
+                <i class="bi bi-envelope me-2"></i>
+                <p>Company@gmail.com.com</p>
+              </div>
+
+              <div class="d-flex my-4">
+                <i class="bx bx-phone-call me-2"></i>
+                <p>Phone: (064) 332-1233</p>
+              </div>
+
+              <div class="d-flex">
+                <i class="bi bi-geo-alt me-2"></i>
+                <p>450 Wall Street, USA, New York</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-sm-6 col-md-6 col-lg-2">
+            <h6>INFORMATION</h6>
+
+            <ul class="list-unstyled">
+              <li><a class="list-link" href="#"> New Collection</a></li>
+              <li><a class="list-link" href="#"> About Store</a></li>
+              <li><a class="list-link" href="#"> Contact Us</a></li>
+              <li><a class="list-link" href="#"> Latest News</a></li>
+              <li><a class="list-link" href="#"> Our Sitemap</a></li>
+              <li><a class="list-link" href="#"> Orders History</a></li>
+            </ul>
+          </div>
+
+          <div class="col col-sm-6 col-md-6 col-lg-2">
+            <h6>FOOTER MENU</h6>
+
+            <ul class="list-unstyled">
+              <li><a href="#" class="list-link"> Instagram profile</a></li>
+              <li><a href="#" class="list-link"> New Collection</a></li>
+              <li><a href="#" class="list-link"> Contact Us</a></li>
+              <li><a href="#" class="list-link"> Latest News</a></li>
+              <li><a href="#" class="list-link"> Terms & Conditions </a></li>
+              <li><a href="#" class="list-link"> Purchase Theme</a></li>
+            </ul>
+          </div>
+
+          <div class="col col-sm-6 col-md-6 col-lg-2">
+            <h6>USEFUL LINKS</h6>
+
+            <ul class="list-unstyled">
+              <li><a href="#" class="list-link"> Instagram profile</a></li>
+              <li><a href="#" class="list-link"> New Collection</a></li>
+              <li><a href="#" class="list-link"> Contact Us</a></li>
+              <li><a href="#" class="list-link"> Latest News</a></li>
+              <li><a href="#" class="list-link"> Terms & Conditions </a></li>
+              <li><a href="#" class="list-link"> Purchase Theme</a></li>
+            </ul>
+          </div>
+
+          <div class="col col-sm-6 col-md-6 col-lg-3 footer-about">
+            <h6>ABOUT THE STORE</h6>
+            <p class="footer-about-description">
+              Lorem ipsum is placeholder text commonly used in the graphic, print, and layouts and visual mockups.
+            </p>
+            <p>www.company.com</p>
+
+            <div class="footer-sm-logos">
+              <a href="facebook.com">
+                <img src="assets/img/sm-logos/facebook.svg" width="10" height="17" alt="facebook-logo" />
+              </a>
+              <a href="instagram.com">
+                <img src="assets/img/sm-logos/instagram.svg" width="17" height="17" alt="instagram-logo" />
+              </a>
+              <a href="twitter.com">
+                <img src="assets/img/sm-logos/twitter.svg" width="21" height="17" alt="twitter-logo" />
+              </a>
+              <a href="linkedin.com">
+                <img src="assets/img/sm-logos/linkedin.svg" width="17" height="16" alt="linkedin-logo" />
+              </a>
+              <a href="youtube.com">
+                <img src="assets/img/sm-logos/youtube.svg" width="20" height="15" alt="youtube-logo" />
+              </a>
+            </div>
+
+            <div class="lang-select">
+              <i class="bx bx-globe"></i>
+              <select class="selectpicker lang-select-option" data-width="fit">
+                <option data-content='<span class="flag-icon flag-icon-us"></span> English' value="eng" selected>English</option>
+                <option data-content='<span class="flag-icon flag-icon-mx"></span> Russian' value="ru">Русский</option>
+                <option data-content='<span class="flag-icon flag-icon-mx"></span> Uzbek' value="uz">O'zbekcha</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Sign in</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password class="form-label">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="******"
+                />
+              </div>
+              <div class="social-auth"></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" id="sign-in" class="btn">Sign in</button>
+            <button type="button" id="sign-up" class="btn">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor JS files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/slick/slick.min.js"></script>
+
+    <!-- Template main JS file -->
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
